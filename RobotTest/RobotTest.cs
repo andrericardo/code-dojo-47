@@ -4,7 +4,7 @@ using Robot;
 
 namespace RobotTest
 {
-    public class UnitTest1
+    public class RobotTest
     {
         [Fact]
         public void Test1()
