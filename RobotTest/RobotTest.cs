@@ -14,12 +14,26 @@ namespace RobotTest
         }
 
         [Fact]
-        public void TestInput() 
+        public void TestNumberOfBlocks_InputTwo_ReturnsTwo()
         {
-            const string input = @"10\nquit";
+            var robot = new Robot.Robot(2);
 
-            var robot = new Robot.Robot(input);
+            //const string expectedOutput = @"0:0\n1:1\2:2";
+            var output = robot.NumberOfBlocks();
 
+            Assert.Equal(2, output);
+        }
+
+        [Fact]
+        public void TestOutput_InputTwo_ReturnsTwo()
+        {
+            var robot = new Robot.Robot(2);
+
+            var n = Environment.NewLine;
+            var expectedOutput = $"0: 0{n}1: 1{n}2: 2{n}";
+            var output = robot.Output();
+
+            Assert.Equal(expectedOutput, output);
         }
     }
 }
