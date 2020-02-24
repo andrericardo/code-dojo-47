@@ -9,7 +9,6 @@ jobs:
       matrix:
         os: [macOS-latest, ubuntu-latest, windows-latest]
     steps:
-    if: matrix.os == 'macOS-latest' || matrix.os == 'ubuntu-latest'
     - uses: actions/checkout@v2
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
